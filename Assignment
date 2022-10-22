@@ -1,0 +1,47 @@
+##GELA
+letter_G = [[" " for i in range(6)] for j in range(7)]
+letter_E = [[" " for i in range(6)] for j in range(7)]
+letter_L = [[" " for i in range(6)] for j in range(7)]
+letter_A = [[" " for i in range(6)] for j in range(7)]
+
+#G
+for row in range(7):
+    for col in range(6):
+        if col==0 or (col==4 and (col==4 and (row!=1 and row!=2))) or \
+                ((row==0 or row==6) and (col>0 and col<4)) or\
+                (row==3 and (col==2 or col==3)):
+            print("*", end="")
+        else:
+            print(end=" ")
+    print()
+
+#E
+for row in range(7):
+    for col in range(5):
+        if col==0 or ((row==0 or row==3 or row==6) and (col>0)):
+            print("*", end="")
+        else:
+            print(end=" ")
+    print()
+
+#L
+for row in range(7):
+    for col in range(5):
+        if col==0 or (row==6 and col>0):
+            print("*", end="")
+        else:
+            print(end=" ")
+    print()
+
+#A
+for row in range(7):
+    for col in range(5):
+        if ((col==0 or col==4) and row!=0) or ((row==0 or row==3) and (col>0 and col<4)):
+            print("*", end="")
+        else:
+            print(end=" ")
+    print()
+
+
+
+
